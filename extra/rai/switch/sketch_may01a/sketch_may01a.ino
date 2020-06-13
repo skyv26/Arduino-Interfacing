@@ -1,0 +1,122 @@
+int i,J,k;
+int a[3];
+
+void setup()
+{
+  for(i=0;i<=5;i++)
+  {
+    pinMode(i,OUTPUT);
+  }
+  
+  for(J=6;J<=9;J++)
+  {
+    pinMode(J,INPUT);
+  }
+  for(k=0;k<=3;k++)
+  {
+    a[k]=HIGH;
+  }
+}
+
+void loop()
+{
+  if(digitalRead(6)==LOW)
+  {
+    a[0]=digitalRead(6);
+    if(a[0]==LOW)
+    {
+      a[1]=digitalRead(9);
+      if(a[1]==LOW)
+      {
+        a[2]=digitalRead(7);
+        if(a[2]==LOW)
+        {
+          a[3]=digitalRead(8);
+          digitalWrite(0,HIGH);
+    digitalWrite(4,HIGH);
+    for(i=1;i<=3;i++)
+    {
+      digitalWrite(i,HIGH);
+      delay(100);
+      digitalWrite(i,LOW);
+      delay(100);
+     }
+     for(i=0;i<5;i++)
+     {
+     digitalWrite(i,HIGH);
+     digitalWrite(5-i,HIGH);
+     delay(200);
+     digitalWrite(i,LOW);
+     digitalWrite(5-i,LOW);
+      }
+      for(i=0;i<5;i++)
+  {
+      digitalWrite(i,HIGH);
+      delay(100);
+      digitalWrite(i,LOW);
+  }
+  for(i=0;i<=4;i++)
+  {
+    digitalWrite(i,HIGH);
+    delay(100);
+    digitalWrite(i,LOW);
+    delay(100);
+  }
+  for(i=3;i>=1;i--)
+   {
+    digitalWrite(i,HIGH);
+    delay(100);
+    digitalWrite(i,LOW);
+    delay(100);
+   }
+   
+        }
+     else
+  {
+    for(i=0;i<=5;i++)
+    {
+      digitalWrite(i,LOW);
+    }
+    for(k=0;k<=3;k++)
+{
+  a[k]=HIGH;
+}
+  }
+      }
+      else
+  {
+    for(i=0;i<=5;i++)
+    {
+      digitalWrite(i,LOW);
+      
+    }
+    for(k=0;k<=3;k++)
+{
+  a[k]=HIGH;
+}
+  }
+    }else
+  {
+    for(i=0;i<=5;i++)
+    {
+      digitalWrite(i,LOW);
+    }
+
+    for(k=0;k<=3;k++)
+{
+  a[k]=HIGH;
+}
+  }
+  }
+    else
+  {
+    for(i=0;i<=5;i++)
+    {
+      digitalWrite(i,LOW);
+    }
+    for(k=0;k<=3;k++)
+{
+  a[k]=HIGH;
+}
+  }
+}

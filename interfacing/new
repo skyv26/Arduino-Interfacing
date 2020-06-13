@@ -1,0 +1,54 @@
+ int i,n=10,s=7,r,ps=LOW;
+  void setup() 
+ {
+  pinMode(i,OUTPUT);
+  pinMode(s,INPUT);
+ }
+ void loop()
+ { if (
+   {for (i=8;i<=15;i++)
+   { 
+    digitalWrite(i,HIGH) ;
+    digitalWrite(23-i,HIGH) ;
+     delay (n);
+     digitalWrite(i,LOW);
+     digitalWrite(23-i,0) ;
+     delay (n);
+    }
+   }
+ }
+ /* for(j=15;j>=8;j--)
+   
+     digitalWrite(j,HIGH) ;
+     delay (n);
+     digitalWrite(j,0) ;
+     delay (n);*/
+
+
+
+
+(switch push button)
+  int btn=7,led=8,count=0,btn_s=0,lbtn_s=0;
+  void setup() 
+ {
+  pinMode(led,OUTPUT);
+  pinMode(btn,INPUT);
+ }
+ void loop()
+ { btn_s=digitalRead(btn);
+  if(btn_s!=lbtn_s)
+  {if(btn_s==HIGH)
+    {count++;}
+  }
+   lbtn_s=btn_s;
+  if(count%2==0)
+   {
+     digitalWrite(led,HIGH);
+     delay(100);
+   }
+   else
+   {
+     digitalWrite(led,LOW);
+     delay(100);
+   }
+ }
